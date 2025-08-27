@@ -1,18 +1,6 @@
-
-import 'package:app_ecommerce/preferences/assets.dart';
-import 'package:app_ecommerce/preferences/color.dart';
-import 'package:app_ecommerce/screens/home/screens/home_page/widget/banner/banner_heels_homepage.dart';
-import 'package:app_ecommerce/screens/home/screens/home_page/widget/banner/last_banner_homepage.dart';
-import 'package:app_ecommerce/screens/home/screens/home_page/widget/banner/special_offers_homepage.dart';
-import 'package:app_ecommerce/screens/home/screens/home_page/widget/feature_homepage.dart';
-import 'package:app_ecommerce/screens/home/screens/home_page/widget/item_notif.dart';
-import 'package:app_ecommerce/screens/home/screens/home_page/widget/product/Product_homepage.dart';
-import 'package:app_ecommerce/screens/home/screens/home_page/widget/product/product_trending_homepage.dart';
-import 'package:app_ecommerce/widget/header/filter_header.dart';
-import 'package:app_ecommerce/widget/header/header.dart';
-import 'package:app_ecommerce/widget/header/search_bar.dart';
+import 'package:app_ecommerce/preferences/preferences.dart';
+import 'package:app_ecommerce/widget/widget.dart';
 import 'package:flutter/material.dart';
-// part '../../../widget/header/search_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -112,7 +100,45 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: buildHeader(),
+      appBar: CustomAppBar(
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.grey[200],
+              shape: BoxShape.circle,
+            ),
+            child: IconButton(
+              icon: const Icon(Icons.menu, color: Colors.black87),
+              onPressed: () {},
+            ),
+          ),
+        ),
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset('assets/image/logo_app.png', height: 32),
+            const SizedBox(width: 8),
+            const Text(
+              'Stylish',
+              style: TextStyle(
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16.0),
+            child: const CircleAvatar(
+              radius: 20,
+              backgroundImage: AssetImage('assets/image/pp.jpg'),
+            ),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -178,8 +204,6 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
-  
 
   Widget buildBanner() {
     return Column(

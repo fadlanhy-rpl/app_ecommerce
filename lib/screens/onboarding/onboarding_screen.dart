@@ -1,8 +1,6 @@
-import 'package:app_ecommerce/screens/home/screens/main_screen/main_screen.dart';
+import 'package:app_ecommerce/screens/screens.dart';
 import 'package:flutter/material.dart';
 
-import 'onboarding_navigation.dart';
-import 'onboarding_page_content.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

@@ -36,6 +36,17 @@ class MainAssets {
   static const trending1 = '${pathProduct}trending1.png';
   static const trending2 = '${pathProduct}trending2.png';
   static const trending3 = '${pathProduct}trending3.png';
+
+  static const produkGrid1 = '${pathProduct}produkGrid1.png';
+  static const produkGrid2 = '${pathProduct}produkGrid2.png';
+  static const produkGrid3 = '${pathProduct}produkGrid3.png';
+  static const produkGrid4 = '${pathProduct}produkGrid4.png';
+  static const produkGrid5 = '${pathProduct}produkGrid5.png';
+  static const produkGrid6 = '${pathProduct}produkGrid6.png';
+
+  static const detailSepatu1 = '${pathProduct}detail_sepatu1.png';
+  static const detailSepatu2 = '${pathProduct}detail_sepatu2.png';
+  static const detailSepatu3 = '${pathProduct}detail_sepatu3.png';
   
 
 }

@@ -1,8 +1,8 @@
-import 'package:app_ecommerce/preferences/color.dart';
-import 'package:app_ecommerce/screens/home/screens/home_page/home_page.dart';
-import 'package:app_ecommerce/screens/product/trending_product/trending_product.dart';
+import 'package:app_ecommerce/preferences/preferences.dart';
+import 'package:app_ecommerce/screens/screens.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -12,7 +12,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  List<Widget> screens = [HomePage(),TrendingProduct() ];
+  List<Widget> screens = [HomePage(),TrendingProduct(), DetailProduct() ];
 
   int selectedIndex = 0;
 
